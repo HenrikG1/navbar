@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint src",
-    "start": "webpack-dev-server --port 9001",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --port 9001",
     "test": "jest --passWithNoTests",
     "build": "webpack --mode=production",
     "analyze": "webpack --mode=production --env.analyze=true",
@@ -40,6 +40,7 @@
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "3.0.0",
     "concurrently": "^5.1.0",
+    "cross-env": "^7.0.3",
     "css-loader": "^3.6.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
